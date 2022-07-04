@@ -12,13 +12,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { IdeasViewComponent } from './views/ideas-view/ideas-view.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatRippleModule} from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LeftNavigationComponent,
-    IdeasViewComponent
+    IdeasViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,8 @@ import {MatRippleModule} from '@angular/material/core';
     AppRoutingModule,
     LayoutModule,
     MatRippleModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

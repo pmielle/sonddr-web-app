@@ -10,4 +10,6 @@
     &.justify-end { justify-content: flex-end; }
     &.align-start { align-items: flex-start; }
     &.align-end { align-items: flex-end; }
+    &.gap { gap: var(--spacing); }
+    &.large-gap { gap: var(--large-spacing); }
 }

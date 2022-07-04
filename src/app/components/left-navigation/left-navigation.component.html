@@ -1,17 +1,28 @@
 
-<div class="flex align-start">
+<div id="container" class="flex align-start">
 
-    <div id="left-nav">
-        <img [src]="pathToLogo" alt="logo" class="icon large">
+    <div id="left-nav" class="flex column large-gap">
         <div 
-            class="item" 
-            *ngFor="let navItem of leftNavItems" 
-            (click)="mode =navItem.targetMode"
+            class="flex"
+            (click)="mode = Modes.ideas"
             matRipple
             [matRippleUnbounded]="true"
             [matRippleCentered]="true"
         >
-            {{ navItem.text }}
+            <img [src]="pathToLogo" alt="logo" class="icon large"/>
+        </div>
+        
+        <div 
+            *ngFor="let navItem of leftNavItems" 
+            class="item flex column" 
+            [class.selected]="mode == navItem.targetMode"
+            (click)="mode = navItem.targetMode"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
+        >
+            <mat-icon>{{ navItem.icon }}</mat-icon>
+            <span>{{ navItem.text }}</span>
         </div>
     </div>
     
