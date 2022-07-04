@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { LeftNavigationComponent } from './components/left-navigation/left-navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IdeasViewComponent } from './views/ideas-view/ideas-view.component';
+import {LayoutModule} from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { IdeasViewComponent } from './views/ideas-view/ideas-view.component';
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     AppRoutingModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

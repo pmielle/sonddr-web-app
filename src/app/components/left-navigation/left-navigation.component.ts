@@ -1,4 +1,20 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { map, Observable } from 'rxjs';
+
+enum Modes {
+  ideas,
+  search,
+  messages,
+  notifications,
+}
+
+interface LeftNavItem {
+  text: string,
+  icon: string,
+  targetMode: Modes,
+  badge?: string,
+}
 
 @Component({
   selector: 'app-left-navigation',
@@ -7,11 +23,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftNavigationComponent implements OnInit {
 
-  path_to_logo = "/assets/logo.png";
+  pathToLogo = "/assets/logo.png";
+  pathToItemIcons = "/assets/icons/";
+  isMobile$: Observable<boolean>;
+  Modes = Modes;
+  mode: Modes = Modes.ideas;
+  leftNavItems: LeftNavItem[] = [
+    {
+      text: "Ideas",
+      icon: "lightbulb",
+      targetMode: Modes.ideas,
+    },
+    {
+      text: "Search",
+      icon: "search",
+      targetMode: Modes.search,
+    },
+    {
+      text: "Messages",
+      icon: "sms",
+      targetMode: Modes.messages,
+    },
+    {
+      text: "Notications",
+      icon: "notifications",
+      targetMode: Modes.notifications,
+    },
+  ];
 
-  constructor() { }
+  constructor(breakpoints: BreakpointObserver) {
+    this.isMobile$ = breakpoints.observe([Breakpoints.XSmall]).pipe(
+      map(x => x.matches),
+    );
+  }
 
   ngOnInit(): void {
   }
+
+
+  // methods
+  // --------------------------------------------
+  // ...
 
 }
