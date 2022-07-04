@@ -1,0 +1,13 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &.column { flex-direction: column; }
+    &.justify-start { justify-content: flex-start; }
+    &.justify-end { justify-content: flex-end; }
+    &.align-start { align-items: flex-start; }
+    &.align-end { align-items: flex-end; }
+}

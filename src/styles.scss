@@ -20,7 +20,7 @@ $sonddr-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$sonddr-theme: mat.define-light-theme((
+$sonddr-theme: mat.define-dark-theme((
   color: (
     primary: $sonddr-primary,
     accent: $sonddr-accent,
@@ -37,3 +37,6 @@ $sonddr-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import './styles/layouts.scss';
+@import './styles/icons.scss';

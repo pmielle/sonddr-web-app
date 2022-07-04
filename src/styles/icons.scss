@@ -1,0 +1,39 @@
+$size-value: 20;
+$size: $size-value + px;
+
+$large-size-value: 32;
+$large-size: $large-size-value + px;
+
+.icon {
+    max-width: $size;
+    max-height: $size;
+
+    &.full-width {
+        max-width: none;
+        max-height: none;
+        width: $size;
+    }
+
+    &.full-height {
+        max-width: none;
+        max-height: none;
+        height: $size;
+    }
+
+    &.large {
+        max-width: $large-size;
+        max-height: $large-size;
+
+        &.full-width {
+            max-width: none;
+            max-height: none;
+            width: $large-size;
+        }
+
+        &.full-height {
+            max-width: none;
+            max-height: none;
+            height: $large-size;
+        }
+    }
+}
