@@ -11,6 +11,8 @@ import { LeftNavigationComponent } from './components/left-navigation/left-navig
 import { AppRoutingModule } from './app-routing.module';
 import { IdeasViewComponent } from './views/ideas-view/ideas-view.component';
 import {LayoutModule} from '@angular/cdk/layout';
+import {MatRippleModule} from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import {LayoutModule} from '@angular/cdk/layout';
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     AppRoutingModule,
     LayoutModule,
+    MatRippleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,9 @@
             class="item" 
             *ngFor="let navItem of leftNavItems" 
             (click)="mode =navItem.targetMode"
+            matRipple
+            [matRippleUnbounded]="true"
+            [matRippleCentered]="true"
         >
             {{ navItem.text }}
         </div>
@@ -16,15 +19,12 @@
         <div class="tab" [class.active]="mode == Modes.ideas">
             <ng-content></ng-content>
         </div>
-        
         <div class="tab" [class.active]="mode == Modes.search">
             search...
         </div>
-        
         <div class="tab" [class.active]="mode == Modes.messages">
             messages...
         </div>
-        
         <div class="tab" [class.active]="mode == Modes.notifications">
             notifications...
         </div>    
