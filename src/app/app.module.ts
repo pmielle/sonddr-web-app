@@ -20,6 +20,7 @@ import { GoalChipComponent } from './components/goal-chip/goal-chip.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IdeaListComponent } from './components/idea-list/idea-list.component';
 import { IdeaCardComponent } from './components/idea-card/idea-card.component';
+import { LeftNavFabComponent } from './components/left-nav-fab/left-nav-fab.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { IdeaCardComponent } from './components/idea-card/idea-card.component';
     GoalChipComponent,
     IdeaListComponent,
     IdeaCardComponent,
+    LeftNavFabComponent,
   ],
   imports: [
     BrowserModule,

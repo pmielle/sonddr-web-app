@@ -1,0 +1,16 @@
+#fab-container {
+    --offset: calc(
+        32px
+        + 43px * 4 
+        + var(--large-spacing) * 6
+    );
+    position: absolute;
+    top: var(--offset);
+    left: calc(-1 * var(--large-spacing) - 75px / 2 - 56px / 2);  // 56 is the size of the fab
+    height: 100%;
+    
+    #fab {
+        position: sticky;
+        top: var(--offset);
+    }
+}

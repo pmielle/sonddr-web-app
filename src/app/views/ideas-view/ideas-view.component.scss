@@ -7,6 +7,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        padding-top: inherit;
     }
 
     #description {
@@ -15,4 +16,6 @@
 
     app-goal-chips { width: 100%; }
 }
+
+
 

@@ -2,3 +2,9 @@
     --spacing: 20px;
     --large-spacing: 40px;
 }
+
+.left-nav-offset {
+    margin-left: calc(2 * var(--spacing) + 75px);
+    padding-top: var(--large-spacing);
+    padding-bottom: var(--large-spacing);
+}
