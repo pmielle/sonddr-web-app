@@ -2,11 +2,11 @@
     --offset: calc(
         32px
         + 43px * 4 
-        + var(--large-spacing) * 6
+        + var(--large-spacing) * 5
     );
     position: absolute;
     top: 0;
-    left: calc(-1 * var(--large-spacing) - 75px / 2 - 56px / 2);  // 56 is the size of the fab
+    left: calc(-1 * var(--large-spacing) - var(--left-nav-width) / 2 - 56px / 2);  // 56 is the size of the fab
     height: 100%;
     
     #fab {

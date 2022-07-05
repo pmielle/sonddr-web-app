@@ -1,4 +1,9 @@
 :root {
     --idea-card-width: 320px;
     --profile-picture-size: 32px;
+    --tab-width: calc(
+        2 * var(--idea-card-width)
+        + var(--spacing)
+    );
+    --left-nav-width: 80px;
 }
