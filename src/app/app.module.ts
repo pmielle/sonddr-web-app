@@ -15,6 +15,9 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ProfilePictureComponent } from './components/profile-picture/profile-picture.component';
+import { GoalChipsComponent } from './components/goal-chips/goal-chips.component';
+import { GoalChipComponent } from './components/goal-chip/goal-chip.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,6 +26,8 @@ import { ProfilePictureComponent } from './components/profile-picture/profile-pi
     LeftNavigationComponent,
     IdeasViewComponent,
     ProfilePictureComponent,
+    GoalChipsComponent,
+    GoalChipComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,7 @@ import { ProfilePictureComponent } from './components/profile-picture/profile-pi
     MatRippleModule,
     MatIconModule,
     MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
