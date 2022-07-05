@@ -1,3 +1,11 @@
-<div id="container" class="flex justify-start gap">
-    <app-idea-card *ngFor="let idea of ideas" [idea]="idea"></app-idea-card>
+<div id="container" class="flex column align-end">
+    <button mat-button>
+        <div id="sort-by" class="flex">
+            <span>By date</span>
+            <mat-icon>sort</mat-icon>
+        </div>
+    </button>
+    <div id="list" class="flex justify-start gap">
+        <app-idea-card *ngFor="let idea of ideas" [idea]="idea"></app-idea-card>
+    </div>
 </div>

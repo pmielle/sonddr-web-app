@@ -1,3 +1,11 @@
 #container {
-    flex-wrap: wrap;
+    gap: 10px;
+
+    #sort-by {
+        gap: 10px;
+    }
+
+    #list { 
+        flex-wrap: wrap; 
+    }
 }

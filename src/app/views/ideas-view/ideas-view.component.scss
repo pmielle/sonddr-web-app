@@ -1,7 +1,7 @@
 #container {
     position: relative;
 
-    h1 { margin-top: 0; }
+    & > * {  margin-top: 0; margin-bottom: 0; }
 
     #logged-in-user-pp {
         position: absolute;
@@ -12,5 +12,7 @@
     #description {
         max-width: var(--idea-card-width);
     }
+
+    app-goal-chips { width: 100%; }
 }
 
