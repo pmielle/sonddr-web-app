@@ -14,6 +14,7 @@ import {LayoutModule} from '@angular/cdk/layout';
 import {MatRippleModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { ProfilePictureComponent } from './components/profile-picture/profile-picture.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
     AppComponent,
     LeftNavigationComponent,
     IdeasViewComponent,
+    ProfilePictureComponent,
   ],
   imports: [
     BrowserModule,

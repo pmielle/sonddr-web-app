@@ -3,8 +3,7 @@
     height: 100vh;
 
     #left-nav {
-        margin-top: var(--large-spacing);
-        padding: 0 var(--spacing);
+        padding: var(--large-spacing);
 
         & > * { 
             cursor: pointer;

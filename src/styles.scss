@@ -41,5 +41,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 * { box-sizing: border-box; }
 
 @import './styles/spacing.scss';
+@import './styles/sizes.scss';
 @import './styles/layouts.scss';
 @import './styles/icons.scss';

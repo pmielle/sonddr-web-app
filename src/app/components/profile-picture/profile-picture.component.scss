@@ -1,0 +1,10 @@
+div {
+    width: var(--profile-picture-size);
+    height: var(--profile-picture-size);
+    border-radius: 99px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}

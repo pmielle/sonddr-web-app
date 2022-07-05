@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { dummyUser, User } from 'src/app/interfaces/user';
 
 @Component({
   selector: 'app-ideas-view',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ideas-view.component.scss']
 })
 export class IdeasViewComponent implements OnInit {
+
+  loggedInUser: User = dummyUser;
 
   constructor() { }
 
