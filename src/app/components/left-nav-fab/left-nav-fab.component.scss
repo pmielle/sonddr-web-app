@@ -5,7 +5,7 @@
         + var(--large-spacing) * 6
     );
     position: absolute;
-    top: var(--offset);
+    top: 0;
     left: calc(-1 * var(--large-spacing) - 75px / 2 - 56px / 2);  // 56 is the size of the fab
     height: 100%;
     
