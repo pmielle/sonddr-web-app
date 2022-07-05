@@ -7,7 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { LeftNavigationComponent } from './components/left-navigation/left-navigation.component';
+import { LeftNavigationComponent } from './left-navigation/left-navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IdeasViewComponent } from './views/ideas-view/ideas-view.component';
 import {LayoutModule} from '@angular/cdk/layout';
