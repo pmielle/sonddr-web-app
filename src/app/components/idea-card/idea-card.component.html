@@ -1,0 +1,19 @@
+<div id="container">
+
+    <div 
+        id="cover" 
+        class="background-cover"
+        [style.backgroundImage]="'url(' + idea.cover + ')'"
+        mat-ripple
+    ></div>
+
+    <div id="bottom">
+        <h3 id="title">{{ idea.title }}</h3>
+
+        <div class="flex gap justify-start">
+            <app-profile-picture [user]="idea.author"></app-profile-picture>
+            <span id="author-date"><span id="author">{{ idea.author.name }}</span> · {{ prettyTimeDelta }}</span>
+        </div>
+    </div>
+
+</div>

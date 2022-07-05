@@ -1,4 +1,9 @@
-<div id="container" class="flex" [style.backgroundColor]="'var(--goal-color-'+goal.order+')'">
+<div 
+    id="container" 
+    class="flex" 
+    [style.backgroundColor]="'var(--goal-color-'+goal.order+')'"
+    mat-ripple
+>
     <mat-icon [svgIcon]="goal.id"></mat-icon>
     <span>{{ goal.name }}</span>
 </div>

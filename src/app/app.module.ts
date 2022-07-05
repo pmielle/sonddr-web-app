@@ -18,6 +18,8 @@ import { ProfilePictureComponent } from './components/profile-picture/profile-pi
 import { GoalChipsComponent } from './components/goal-chips/goal-chips.component';
 import { GoalChipComponent } from './components/goal-chip/goal-chip.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IdeaListComponent } from './components/idea-list/idea-list.component';
+import { IdeaCardComponent } from './components/idea-card/idea-card.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProfilePictureComponent,
     GoalChipsComponent,
     GoalChipComponent,
+    IdeaListComponent,
+    IdeaCardComponent,
   ],
   imports: [
     BrowserModule,

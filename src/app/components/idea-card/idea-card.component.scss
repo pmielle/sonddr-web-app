@@ -1,0 +1,31 @@
+#container {
+    position: relative;
+    width: var(--idea-card-width);
+
+    #cover {
+        width: 100%;
+        aspect-ratio: 16/9;
+        cursor: pointer;
+    }
+
+    #bottom {
+        padding: var(--spacing);
+
+        #title { 
+            margin-top: 0;
+            margin-bottom: 3px;
+            margin-left: calc(var(--spacing) + var(--profile-picture-size));
+            cursor: pointer;
+        }
+    
+        #author-date {
+            opacity: 0.5; 
+
+            #author {
+                cursor: pointer;
+            }
+        }
+    }
+
+    
+}
