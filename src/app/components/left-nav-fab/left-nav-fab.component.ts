@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-left-nav-fab',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-nav-fab.component.scss']
 })
 export class LeftNavFabComponent implements OnInit {
+
+  @Input('color') color!: string;
+  @Input('icon') icon!: string;
 
   constructor() { }
 
