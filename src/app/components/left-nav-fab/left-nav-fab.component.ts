@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-left-nav-fab',
@@ -9,10 +9,17 @@ export class LeftNavFabComponent implements OnInit {
 
   @Input('color') color!: string;
   @Input('icon') icon!: string;
+  @Output('fab-click') fabClick = new EventEmitter<void>();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // methods
+  // --------------------------------------------
+  onClick() {
+    this.fabClick.next();
   }
 
 }
