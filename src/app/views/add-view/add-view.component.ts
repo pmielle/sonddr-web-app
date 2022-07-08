@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { dummyUser } from 'src/app/interfaces/user';
 
 @Component({
@@ -12,9 +13,15 @@ export class AddViewComponent implements OnInit {
   content: string = "";
   loggedInUser = dummyUser;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  // methods
+  // --------------------------------------------
+  onCloseClick() {
+    this.router.navigateByUrl("/")
   }
 
 }
