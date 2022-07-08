@@ -1,0 +1,97 @@
+#container {
+    position: relative;
+    --left-offset: 60px;
+    min-height: 100%;
+
+    #toolbar {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        padding: var(--spacing);
+        padding-top: var(--large-spacing);
+        background-color: var(--transparent-background-color);
+
+        #toolbar-title { margin: 0; }
+    }
+
+    #cover {
+        background-color: var(--transparent-foreground-color);
+        height: 300px;
+        width: 100%;
+        cursor: pointer;
+
+        #upload { 
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            gap: 10px; 
+            margin-top: 40px;
+            color: var(--background-color);
+        }
+
+        #goals {
+            z-index: 1;
+            position: absolute;
+            bottom: var(--spacing);
+            left: calc(
+                var(--left-offset)
+                + var(--profile-picture-size) 
+                + var(--spacing)
+            );
+
+            #add-goal {
+                display: inline-flex;
+                gap: 10px;
+                padding: 5px 10px;
+                border-radius: 99px;
+                background-color: var(--background-color);
+                cursor: pointer;
+                        
+                mat-icon {
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+
+    #content {
+        flex: 1;
+        padding-left: var(--left-offset);
+        width: 100%;
+
+        & > * {
+            width: 100%;
+        }
+
+        input {
+            font-size: 20pt;
+            font-weight: bold;
+            padding-left: calc(
+                var(--profile-picture-size) 
+                + var(--spacing)
+            );
+        }
+        
+        #content-input-container {
+            flex: 1;
+
+            textarea {
+                font-size: inherit;
+                font-weight: inherit;
+                flex: 1; 
+                width: 100%; 
+            }
+        }
+    }
+}
+
+textarea, input {
+    font-family: inherit;
+    color: inherit;
+    outline: none;
+    background: none;
+    border: none;
+    resize: none;
+}

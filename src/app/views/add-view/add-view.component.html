@@ -1,0 +1,35 @@
+<div id="container" class="flex column align-start gap">
+    <div id="toolbar" class="flex justify-start gap">
+        <button mat-icon-button>
+            <mat-icon>close</mat-icon>
+        </button>
+        <h2 id="toolbar-title">Share an idea</h2>
+    </div>
+    
+    <div id="cover" mat-ripple>
+        <div id="upload" class="flex">
+            <mat-icon>upload</mat-icon>
+            <span>Upload a cover</span>
+        </div>
+        <div id="goals">
+            <div id="add-goal" class="flex" mat-ripple appStopPropagation>
+                <mat-icon>add</mat-icon>
+                <span>Goal(s) of interest</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="flex column gap">
+        <input 
+            [(ngModel)]="title" 
+            placeholder="Choose a title"
+        />
+        <div id="content-input-container" class="flex align-start gap">
+            <app-profile-picture [user]="loggedInUser"></app-profile-picture>
+            <textarea 
+                [(ngModel)]="content"
+                placeholder="Explain your idea.."
+            ></textarea> <!-- TODO: auto-grow... -->
+        </div>
+    </div>
+</div>

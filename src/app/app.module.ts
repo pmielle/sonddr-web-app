@@ -21,6 +21,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { IdeaListComponent } from './components/idea-list/idea-list.component';
 import { IdeaCardComponent } from './components/idea-card/idea-card.component';
 import { LeftNavFabComponent } from './components/left-nav-fab/left-nav-fab.component';
+import { AddViewComponent } from './views/add-view/add-view.component';
+import { StopPropagationDirective } from './directives/stop-propagation.directive';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+
+
 
 
 @NgModule({
@@ -34,6 +41,8 @@ import { LeftNavFabComponent } from './components/left-nav-fab/left-nav-fab.comp
     IdeaListComponent,
     IdeaCardComponent,
     LeftNavFabComponent,
+    AddViewComponent,
+    StopPropagationDirective,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,9 @@ import { LeftNavFabComponent } from './components/left-nav-fab/left-nav-fab.comp
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
