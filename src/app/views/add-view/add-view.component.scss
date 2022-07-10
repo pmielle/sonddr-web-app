@@ -78,20 +78,8 @@
             flex: 1;
 
             textarea {
-                font-size: inherit;
-                font-weight: inherit;
                 flex: 1; 
-                width: 100%; 
             }
         }
     }
-}
-
-textarea, input {
-    font-family: inherit;
-    color: inherit;
-    outline: none;
-    background: none;
-    border: none;
-    resize: none;
 }

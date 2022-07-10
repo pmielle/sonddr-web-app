@@ -21,12 +21,14 @@
 
     <div id="content" class="flex column gap">
         <input 
+            class="input"
             [(ngModel)]="title" 
             placeholder="Choose a title"
         />
         <div id="content-input-container" class="flex align-start gap">
             <app-profile-picture [user]="loggedInUser"></app-profile-picture>
             <textarea 
+            class="input"
                 [(ngModel)]="content"
                 placeholder="Explain your idea.."
             ></textarea> <!-- TODO: auto-grow... -->

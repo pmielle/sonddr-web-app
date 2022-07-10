@@ -26,6 +26,7 @@ import { StopPropagationDirective } from './directives/stop-propagation.directiv
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { LogInViewComponent } from './views/log-in-view/log-in-view.component';
 
 
 
@@ -43,6 +44,7 @@ import {MatInputModule} from '@angular/material/input';
     LeftNavFabComponent,
     AddViewComponent,
     StopPropagationDirective,
+    LogInViewComponent,
   ],
   imports: [
     BrowserModule,

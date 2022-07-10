@@ -1,7 +1,7 @@
 
 <div id="container">
 
-    <div id="left-nav" class="flex column large-gap">
+    <div *ngIf="loggedInUser !== null" id="left-nav" class="flex column large-gap">
         <div 
             class="flex"
             (click)="mode = Modes.ideas"

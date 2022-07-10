@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../interfaces/user';
 
 enum Modes {
   ideas,
@@ -21,6 +22,7 @@ interface LeftNavItem {
 })
 export class LeftNavigationComponent implements OnInit {
 
+  loggedInUser: User|null = null;
   pathToLogo = "/assets/logo.png";
   pathToItemIcons = "/assets/icons/";
   Modes = Modes;

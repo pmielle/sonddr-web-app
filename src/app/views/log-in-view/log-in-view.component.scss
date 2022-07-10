@@ -1,0 +1,47 @@
+#container {
+    --width: 300px;
+    position: relative;
+    height: 100%;
+    padding: var(--large-spacing) 0;
+
+    #greetings { margin: 0; }
+
+    #buttons {
+
+        button {
+            width: var(--width);
+            height: 60px;
+            border-radius: 20px;
+
+            &.green { background: var(--green-color); }
+
+            img { 
+                margin-right: 10px;  // hypothesis: icon is leading
+                height: 26px; 
+            }
+        }
+
+        #other-providers {  
+            align-self: flex-start;
+            color: var(--transparent-foreground-color);
+            background-color: var(--background-color);      
+            display: inline-flex;
+            gap: 10px;
+            padding: 5px 10px;
+            border-radius: 99px;
+            cursor: pointer;
+            
+            mat-icon {
+                transform: scale(0.8);
+            }
+        }
+    }
+
+    #new-here-container {
+        width: var(--width);
+        text-align: center;
+
+        #new-here { opacity: 0.5; }
+        #create-an-account { cursor: pointer; }
+    }
+}
