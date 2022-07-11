@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../interfaces/user';
+import { AuthenticationService } from '../services/authentication.service';
 
 enum Modes {
   ideas,
@@ -22,7 +23,6 @@ interface LeftNavItem {
 })
 export class LeftNavigationComponent implements OnInit {
 
-  loggedInUser: User|null = null;
   pathToLogo = "/assets/logo.png";
   pathToItemIcons = "/assets/icons/";
   Modes = Modes;
@@ -50,7 +50,7 @@ export class LeftNavigationComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(public auth: AuthenticationService) { }
 
   ngOnInit(): void {
   }

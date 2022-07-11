@@ -27,8 +27,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { LogInViewComponent } from './views/log-in-view/log-in-view.component';
-
-
+import { AuthModule } from '@auth0/auth0-angular';
 
 
 @NgModule({
@@ -49,8 +48,8 @@ import { LogInViewComponent } from './views/log-in-view/log-in-view.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot(),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     AppRoutingModule,
     LayoutModule,
@@ -61,6 +60,7 @@ import { LogInViewComponent } from './views/log-in-view/log-in-view.component';
     MatFormFieldModule,
     FormsModule,
     MatInputModule,
+    AuthModule.forRoot(environment.auth0),
   ],
   providers: [],
   bootstrap: [AppComponent]

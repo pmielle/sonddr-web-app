@@ -1,14 +1,34 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Injectable, NgModule } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
+import { AuthenticationService } from './services/authentication.service';
 import { AddViewComponent } from './views/add-view/add-view.component';
 import { IdeasViewComponent } from './views/ideas-view/ideas-view.component';
 import { LogInViewComponent } from './views/log-in-view/log-in-view.component';
 
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard implements CanActivate {
+  constructor(
+    private auth: AuthenticationService, 
+    private router: Router
+  ) {}
+
+  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    if (!this.auth.user) {
+      this.router.navigateByUrl('/login');
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
 const routes: Routes = [
-  {path: "", redirectTo: "/ideas", pathMatch: 'full'},
-  {path: "ideas", component: IdeasViewComponent},
-  {path: "add", component: AddViewComponent},
   {path: "login", component: LogInViewComponent},
+  {path: "", redirectTo: "/ideas", pathMatch: 'full'},
+  {path: "ideas", component: IdeasViewComponent, canActivate: [AuthGuard]},
+  {path: "add", component: AddViewComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({
