@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { dummyGoal, Goal } from 'src/app/interfaces/goal';
 import { dummyUser, User } from 'src/app/interfaces/user';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-ideas-view',
@@ -18,7 +19,10 @@ export class IdeasViewComponent implements OnInit {
     dummyGoal("peace_and_justice", 4),
   ];
 
-  constructor(private router: Router) { }
+  constructor(
+    public auth: AuthenticationService,
+    private router: Router, 
+    ) { }
 
   ngOnInit(): void {
   }

@@ -10,7 +10,7 @@
     <div id="buttons" class="flex column gap">
         <button mat-raised-button class="green">Log in</button>
         <span>or</span>
-        <button mat-raised-button>
+        <button mat-raised-button (click)="auth.logIn()">
             <img src="/assets/google-logo.png"/>
             Log in with Google
         </button>
