@@ -1,25 +1,11 @@
+<div id="background"></div>
 <div id="container" class="flex column align-start large-gap">
 
-    <h1 id="greetings">{{ chooseGreetings() }} 👋</h1>
-
-    <div id="inputs" class="flex column gap">
-        <input class="input" type="text" [(ngModel)]="username" placeholder="Username"/>
-        <input class="input" type="password" [(ngModel)]="password" placeholder="Password"/>
-    </div>
+    <h1 id="greetings">sonddr is a place to share and contribute to each other ideas to make the world a little (or a lot) better</h1>
 
     <div id="buttons" class="flex column gap">
-        <button mat-raised-button class="green">Log in</button>
-        <span>or</span>
-        <button mat-raised-button (click)="auth.logIn()">
-            <img src="/assets/google-logo.png"/>
-            Log in with Google
-        </button>
-        <div id="other-providers" class="flex" mat-ripple>
-            <mat-icon>expand_more</mat-icon>
-            <span>Other providers</span>
-        </div>
+        <button mat-raised-button class="green" (click)="auth.logIn()">Log in</button>
+        <button mat-raised-button class="white">Sign up</button>
     </div>
-
-    <p id="new-here-container"><span id="new-here">New here? </span><span id="create-an-account">Create an account</span></p>
 
 </div>

@@ -8,9 +8,6 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
 })
 export class LogInViewComponent implements OnInit {
 
-  username: string = "";
-  password: string = "";
-
   constructor(public auth: AuthenticationService) { }
 
   ngOnInit(): void {
@@ -18,18 +15,6 @@ export class LogInViewComponent implements OnInit {
 
   // methods
   // --------------------------------------------
-  chooseGreetings(): string {
-    let now = new Date()
-    let hourOfTheDay = now.getHours();
-    if (hourOfTheDay < 3) {
-      return "Good evening";
-    } else if (hourOfTheDay < 12) {
-      return "Good morning";
-    } else if (hourOfTheDay < 19) {
-      return "Good afternoon";
-    } else {
-      return "Good evening";
-    }
-  }
+  // ...
 
 }
